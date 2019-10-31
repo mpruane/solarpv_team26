@@ -1,6 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
   <head>
-    <link rel="stylesheet" type="text/css" href="decor.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'solarpv/decore.css' %}">
     <title>Solar PV: About</title>
   </head>
   <body>
@@ -10,35 +11,35 @@
       <img class="compbanner" src="banner.png">
     </div>
     <div class="header">
-      <a href="about.html">About Us</a> | 
-      <a href="contact.html">Contact Us</a><br>
+      <a href="{% url 'about' %}">About Us</a> | 
+      <a href="{% url 'contact' %}">Contact Us</a><br>
       <a href="http://www.twitter.com"><img class="socialmedia" src="twitter.png"></a> 
       <a href="http://www.facebook.com"><img  class="socialmedia" src="fbook.png"></a> 
       <a href="http://www.instagram.com"><img class="socialmedia" src="instagram.png"></a>
     </div>
     <div class="nav">
-      <a href="blank.html">Racks & Trackers</a> | 
-      <a href="blank.html">PV Module</a> | 
-      <a href="blank.html">PV Systems</a> | 
-      <a href="blank.html">Data Analytics</a> | 
-      <a href="blank.html">Cybersecurity</a>
+      <a href="{% url 'blank' %}">Racks & Trackers</a> | 
+      <a href="{% url 'blank' %}">PV Module</a> | 
+      <a href="{% url 'blank' %}">PV Systems</a> | 
+      <a href="{% url 'blank' %}">Data Analytics</a> | 
+      <a href="{% url 'blank' %}">Cybersecurity</a>
     </div>
     <div class="l_sidebar">
       <div class="account">
-        <a href="register.html">Register</a> | 
-        <a href="login.html">Login</a>
+        <a href="{% url 'register' %}">Register</a> | 
+        <a href="{% url 'login' %}">Login</a>
       </div>
-  	  <p><h3><a href="blank.html">PV Module</a></h3></p>
+  	  <p><h3><a href="{% url 'blank' %}">PV Module</a></h3></p>
   		<ul>
-  			<li><a href="blank.html">Testing & Certification</a></li>
-  			<li><a href="blank.html">PV Rating</a></li>
+  			<li><a href="{% url 'blank' %}">Testing & Certification</a></li>
+  			<li><a href="{% url 'blank' %}">PV Rating</a></li>
   		</ul>
-  	  <p><h3><a href="blank.html">PV System Performance</a></h3></p>
+  	  <p><h3><a href="{% url 'blank' %}">PV System Performance</a></h3></p>
   		<ul>
-  			<li><a href="blank.html">Monitoring & Inspection</a></li>
-  			<li><a href="blank.html">Performance Analysis</a></li>
-  			<li><a href="blank.html">Compare System</a></li>
-  			<li><a href="blank.html">Certification</a></li>
+  			<li><a href="{% url 'blank' %}">Monitoring & Inspection</a></li>
+  			<li><a href="{% url 'blank' %}">Performance Analysis</a></li>
+  			<li><a href="{% url 'blank' %}">Compare System</a></li>
+  			<li><a href="{% url 'blank' %}">Certification</a></li>
   		</ul>
     </div>
     <div class="content">
@@ -51,7 +52,7 @@
     </br>
       <p>Here at Solar PV, every job is as big as the next.  Every step is a step in the right direction towards ending climate change and making this earth more sistanable.</p>
       <p>We are not just a research and development company, we also do practical training and install our products throughout the globe.</p>
-      <p>If you are interested in becoming a team member or are looking for a qoute please make sure to Register with our site by <a href="register.html">clicking here</a>.</p>
+      <p>If you are interested in becoming a team member or are looking for a qoute please make sure to Register with our site by <a href="{% url 'register' %}">clicking here</a>.</p>
     </div>
     <div class="r_sidebar">
        <svg width="214" height="460">
@@ -80,14 +81,14 @@
         <h3>E-mail: </h3> 
         <a href="mailto:Contact@SolarPV.com">Contact@SolarPV.com</a> 
         <h3>Website:</h3> 
-        <a href="index.html">www.SolarPV.com</a>
+        <a href="{% url 'index' %}">www.SolarPV.com</a>
       </section>
     </div>
     <div class="footer">
-      <a href="blank.html">Site Map</a> | 
-      <a href="blank.html">Terms & Conditions</a> | 
-      <a href="blank.html">Privacy Policy</a> | 
-      <a href="about.html">About Us</a>
+      <a href="{% url 'blank' %}">Site Map</a> | 
+      <a href="{% url 'blank' %}">Terms & Conditions</a> | 
+      <a href="{% url 'blank' %}">Privacy Policy</a> | 
+      <a href="{% url 'about' %}">About Us</a>
     </div>
   </div>
   <script>
