@@ -1,0 +1,214 @@
+.banner {
+  grid-area: banner;
+  background-color:black;
+  padding-left: 4px;
+  padding-top: 4px;
+  border-top-left-radius: 15px;
+}
+.header {
+  grid-area: header;
+  background-color:black;
+  text-align: right;
+  padding-right: 8px;
+  padding-top: 10px;
+  border-top-right-radius: 15px;
+}
+.nav {
+  grid-area: nav;
+  background-color:black;
+  text-align: center;
+}
+.l_sidebar {
+  grid-area: l_sidebar;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color:black;
+}
+.content {
+  grid-area: content;
+  background-color:black;
+}
+.content h3{
+  color: orange;
+}
+.r_sidebar {
+  grid-area: r_sidebar;
+  background-color:black;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 40px;
+  text-align: center;
+
+  position: relative;
+  display: inline-block;
+}
+.r_sidebar svg {
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.r_sidebar p {
+  position: relative;
+}
+.r_sidebar h2 {
+  position: relative;
+  color: orange;
+  text-decoration: underline;
+}
+.bottom {
+  grid-area: bottom;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color:black;
+  font-size: 14px;
+}
+.footer {
+  grid-area: footer;
+  background-color:black;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 220px 500px 220px;
+  grid-template-rows: 115px 40px auto 80px 25px;
+  grid-template-areas: 
+	"banner banner header"
+	"nav nav nav"
+	"l_sidebar content r_sidebar"
+	"bottom bottom bottom"
+	"footer footer footer";
+}
+.Slides { 
+  display:none; 
+  border-radius: 3px;
+}
+.SlideGroup {
+  max-width:400px;
+  display:block; 
+  margin: 0 auto;
+}
+.compbanner {
+  border-top-left-radius: 12px;
+}
+.compinfo {
+  margin-top: -10px;
+  text-align: center;
+}
+.socialmedia {
+  padding-top: 7px;
+  padding-right: 5px;
+  width: 25px;
+  height: 25px;
+}
+.account a:link {color: orange; }
+.account a:visited {color: orange;}
+.account a:active {color: white;}
+.account a:hover {color: white;}
+.r_sidebar a:link {color: white; }
+.r_sidebar a:visited {color: white;}
+.r_sidebar a:hover {color: blue;}
+.logintable {
+  width: 400px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+.logintable label {
+  display: block;
+  text-align: right;
+}
+.regform {
+  padding-left: 20px;
+  width:100%;
+}
+.regform label.error{
+  margin-left: 10px;
+  width: auto;
+  display: inline;
+  color: yellow;
+}
+.regform label.error{
+  color:yellow;
+}
+.loginForm label.error{
+  color:yellow;
+  float: right;
+}
+.loginsub {
+  display:block; 
+  margin: 0 auto;
+}
+.submit {
+    display:block; 
+  margin: 0 auto;
+}
+video { 
+  display:block; 
+  margin: 0 auto;
+}
+p + ul {
+  margin-top: -10px;
+}
+body {
+  background-color: gray;
+ color:white;
+ font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: normal;
+}
+h2 {
+  color: blue;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+}
+h3 {
+  display: inline;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+h3 a:link {color: blue; }
+h3 a:visited {color: blue;}
+h3 a:active {color: orange;}
+h3 a:hover {color: white;}
+#map { 
+width:90%; 
+height:60%;
+}
+#div1 {
+  width: 30px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#security {
+  text-align: center;
+  color: white;
+}
+table {
+  width: 100%;
+  padding-top: 10px;
+}
+td:first-child {
+  font-weight: bold;
+  font-size 1.1em;
+  color: orange;
+}
+td:last-child {
+  text-align: right;
+  color: orange;
+  font-weight: bold;
+  font-size 1.1em; 
+}
+a {text-decoration: none;}
+a:link {color: red;}
+a:visited {color: #ff4d4d;}
+a:active {color: orange;}
+a:hover {color: white;}

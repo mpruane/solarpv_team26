@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+  <head>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script src="registration.js"></script>
+    <link rel="stylesheet" type="text/css" href="decor.css">
+    <title>Solar PV: Register</title>
+  </head>
+  <body>
+  </br>
+  <div class="container"> 
+    <div class="banner">
+      <img class="compbanner" src="banner.png">
+    </div>
+    <div class="header">
+      <a href="about.html">About Us</a> | 
+      <a href="contact.html">Contact Us</a><br>
+      <a href="http://www.twitter.com"><img class="socialmedia" src="twitter.png"></a> 
+      <a href="http://www.facebook.com"><img  class="socialmedia" src="fbook.png"></a> 
+      <a href="http://www.instagram.com"><img class="socialmedia" src="instagram.png"></a>
+    </div>
+    <div class="nav">
+      <a href="blank.html">Racks & Trackers</a> | 
+      <a href="blank.html">PV Module</a> | 
+      <a href="blank.html">PV Systems</a> | 
+      <a href="blank.html">Data Analytics</a> | 
+      <a href="blank.html">Cybersecurity</a>
+    </div>
+    <div class="l_sidebar">
+      <div class="account">
+        <a href="register.html">Register</a> | 
+        <a href="login.html">Login</a>
+      </div>
+  	  <p><h3><a href="blank.html">PV Module</a></h3></p>
+  		<ul>
+  			<li><a href="blank.html">Testing & Certification</a></li>
+  			<li><a href="blank.html">PV Rating</a></li>
+  		</ul>
+  	  <p><h3><a href="blank.html">PV System Performance</a></h3></p>
+  		<ul>
+  			<li><a href="blank.html">Monitoring & Inspection</a></li>
+  			<li><a href="blank.html">Performance Analysis</a></li>
+  			<li><a href="blank.html">Compare System</a></li>
+  			<li><a href="blank.html">Certification</a></li>
+  		</ul>
+    </div>
+    <div class="content">
+      <h1>Registration</h1>
+      <form class="regform" id="registrationForm" method="get" action="">
+        
+          <p>
+            <label for="rusername">Username: </label>
+            <input id="rusername" name="rusername" type="text" autofocus>
+          </p>
+          <p>
+            <label for="rpassword">Password: </label>
+            <input id="rpassword" name="rpassword" type="password">
+          </p>
+          <p>
+            <label for="rfirstname">First Name: </label>
+            <input id="rfirstname" name="rfirstname" type="text">
+          </p>
+          <p>
+            <label for="rmiddlename">Middle Name: </label>
+            <input id="rmiddlename" name="rmiddlename" type="text">
+          </p>
+          <p>
+            <label for="rlastname">Last Name: </label>
+            <input id="rlastname" name="rlastname" type="text">
+          </p>
+          <p>
+            <label for="gender" id="genderid">Gender: </label>
+            <input id="maleRB" type="radio" name="gender" value="male">
+            <label for="maleRB" >Male</label>
+            <input id="femaleRB" type="radio" name="gender" value="female">
+            <label for="femaleRB" >Female</label>
+          </p>
+          <p>
+            <label for="raddress">Address: </label>
+            <input id="raddress" name="raddress" type="text">
+          </p>
+          <p>
+            <label for="rcity">City: </label>
+            <input id="rcity" name="rcity" type="text">
+          </p>
+          <p>
+            <label for="rstate">State: </label>
+            <input list="rstate" name="rstate">
+            <datalist id="rstate">
+              <option value="AK">
+              <option value="AL">
+              <option value="AR">
+              <option value="AZ">
+              <option value="CA">
+              <option value="CO">
+              <option value="CT">
+              <option value="DE">
+              <option value="FL">
+              <option value="GA">
+              <option value="HI">
+              <option value="IA">
+              <option value="ID">
+              <option value="IL">
+              <option value="IN">
+              <option value="KS">
+              <option value="KY">
+              <option value="LA">
+              <option value="MA">
+              <option value="MD">
+              <option value="ME">
+              <option value="MI">
+              <option value="MN">
+              <option value="MO">
+              <option value="MS">
+              <option value="MT">
+              <option value="NC">
+              <option value="ND">
+              <option value="NE">
+              <option value="NH">
+              <option value="NJ">
+              <option value="NM">
+              <option value="NV">
+              <option value="NY">
+              <option value="OH">
+              <option value="OK">
+              <option value="OR">
+              <option value="PA">
+              <option value="RI">
+              <option value="SC">
+              <option value="SD">
+              <option value="TN">
+              <option value="TX">
+              <option value="UT">
+              <option value="VA">
+              <option value="VT">
+              <option value="WA">
+              <option value="WI">
+              <option value="WV">
+              <option value="WY">
+            </datalist>
+          </p>
+          <p>
+            <label for="rzip">Zip Code: </label>
+            <input id="rzip" name="rzip" type="number">
+          </p>
+          <p>
+            <label for="remail">E-mail: </label>
+            <input id="remail" name="remail" type="email">
+          </p>
+          <p>
+            <label for="rcell">Cell Phone: </label>
+            <input id="rcell" name="rcell" type="number">
+          </p>
+          <p>
+            <label for="rcompany">Company Name: </label>
+            <input id="rcompany" name="rcompany" type="text">
+          </p>
+          <p>
+            <input class="submit" type="submit" value="Submit">
+          </p>
+        
+      </form>
+    </div>
+    <div class="r_sidebar">
+       <svg width="214" height="460">
+         <rect x="2" y="4" rx="20" ry="20" width="214" height="450"
+         style="fill:darkgray;stroke:black;stroke-width:5;opacity:0.5" />
+       </svg>
+       <h2>Solar News & Events</h2>
+  	   <p><a href="https://activatenow.us/tulsi-gabbard-mark-ruffalo-attend-grand-opening-first-solar-energy-farm-nd-standing-rock/">Grand Opening of First Solar Energy Farm in ND</a></p>
+  	   <p><a href="https://techcrunch.com/2019/07/05/toyota-testing-improved-solar-roof-for-electric-cars-that-can-charge-while-driving/">Toyota testing improved solar roof for electric cars that can charge while driving</a></p>
+  	   <p><a href="https://cleantechnica.com/2019/01/21/the-rooftop-solar-neighborhood-effect-transforms-florida-community/">The Rooftop Solar “Neighborhood Effect” Transforms Florida Community</a></p>
+  	   <p><a href="https://www.treehugger.com/solar-technology/solar-road-france-generates-half-power-expected.html">Solar road in France generates half the power expected</a></p>
+  	   <p><a href="https://news.yahoo.com/carbon-nanotubes-could-increase-solar-190100237.html">Carbon Nanotubes Could Increase Solar Efficiency to 80 Percent</a></p>
+    </div>
+    <div class="bottom">
+      <table>
+        <tr>
+          <td>Solar PV</td>
+          <td>@ 2019 All Rights Reserved</td>
+        </tr>
+      </table>
+      <section class="compinfo"></br>
+        <h3>Location:</h3> 
+          6425 Penn Ave, Pittsburgh, PA 
+        <h3>Phone:</h3> 
+          724-555-7194 
+        <h3>E-mail: </h3> 
+        <a href="mailto:Contact@SolarPV.com">Contact@SolarPV.com</a> 
+        <h3>Website:</h3> 
+        <a href="index.html">www.SolarPV.com</a>
+      </section>
+    </div>
+    <div class="footer">
+      <a href="blank.html">Site Map</a> | 
+      <a href="blank.html">Terms & Conditions</a> | 
+      <a href="blank.html">Privacy Policy</a> | 
+      <a href="about.html">About Us</a>
+    </div>
+  </div>
+  </body>
+</html>

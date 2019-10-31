@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="decor.css">
+    <title>Solar PV: Contact Us</title>
+  </head>
+  <body onload="getLocation()">
+  </br>
+  <div class="container"> 
+    <div class="banner">
+      <img class="compbanner" src="banner.png">
+    </div>
+    <div class="header">
+      <a href="about.html">About Us</a> | 
+      <a href="contact.html">Contact Us</a><br>
+      <a href="http://www.twitter.com"><img class="socialmedia" src="twitter.png"></a> 
+      <a href="http://www.facebook.com"><img  class="socialmedia" src="fbook.png"></a> 
+      <a href="http://www.instagram.com"><img class="socialmedia" src="instagram.png"></a>
+    </div>
+    <div class="nav">
+      <a href="blank.html">Racks & Trackers</a> | 
+      <a href="blank.html">PV Module</a> | 
+      <a href="blank.html">PV Systems</a> | 
+      <a href="blank.html">Data Analytics</a> | 
+      <a href="blank.html">Cybersecurity</a>
+    </div>
+    <div class="l_sidebar">
+      <div class="account">
+        <a href="register.html">Register</a> | 
+        <a href="login.html">Login</a>
+      </div>
+  	  <p><h3><a href="blank.html">PV Module</a></h3></p>
+  		<ul>
+  			<li><a href="blank.html">Testing & Certification</a></li>
+  			<li><a href="blank.html">PV Rating</a></li>
+  		</ul>
+  	  <p><h3><a href="blank.html">PV System Performance</a></h3></p>
+  		<ul>
+  			<li><a href="blank.html">Monitoring & Inspection</a></li>
+  			<li><a href="blank.html">Performance Analysis</a></li>
+  			<li><a href="blank.html">Compare System</a></li>
+  			<li><a href="blank.html">Certification</a></li>
+  		</ul>
+    </div>
+    <div class="content">
+      <h1>Contact Information</h1>
+      <p><h3>Main Phone Number: </h3>724-555-7194</p>
+      <p><h3>E-mail: </h3><a href="mailto:Contact@SolarPV.com">Contact@SolarPV.com</a></p>
+      <p><h1>Directions</h1></p>
+      <div id="errormsg"></div>
+      <div id="map"></div>
+    </div>
+    <div class="r_sidebar">
+       <svg width="214" height="460">
+         <rect x="2" y="4" rx="20" ry="20" width="214" height="450"
+         style="fill:darkgray;stroke:black;stroke-width:5;opacity:0.5" />
+       </svg>
+       <h2>Solar News & Events</h2>
+  	   <p><a href="https://activatenow.us/tulsi-gabbard-mark-ruffalo-attend-grand-opening-first-solar-energy-farm-nd-standing-rock/">Grand Opening of First Solar Energy Farm in ND</a></p>
+  	   <p><a href="https://techcrunch.com/2019/07/05/toyota-testing-improved-solar-roof-for-electric-cars-that-can-charge-while-driving/">Toyota testing improved solar roof for electric cars that can charge while driving</a></p>
+  	   <p><a href="https://cleantechnica.com/2019/01/21/the-rooftop-solar-neighborhood-effect-transforms-florida-community/">The Rooftop Solar “Neighborhood Effect” Transforms Florida Community</a></p>
+  	   <p><a href="https://www.treehugger.com/solar-technology/solar-road-france-generates-half-power-expected.html">Solar road in France generates half the power expected</a></p>
+  	   <p><a href="https://news.yahoo.com/carbon-nanotubes-could-increase-solar-190100237.html">Carbon Nanotubes Could Increase Solar Efficiency to 80 Percent</a></p>
+    </div>
+    <div class="bottom">
+      <table>
+        <tr>
+          <td>Solar PV</td>
+          <td>@ 2019 All Rights Reserved</td>
+        </tr>
+      </table>
+      <section class="compinfo"></br>
+        <h3>Location:</h3> 
+          6425 Penn Ave, Pittsburgh, PA
+        <h3>Phone:</h3> 
+          724-555-7194 
+        <h3>E-mail: </h3>
+        <a href="mailto:Contact@SolarPV.com">Contact@SolarPV.com</a> 
+        <h3>Website:</h3> 
+        <a href="index.html">www.SolarPV.com</a>
+      </section>
+    </div>
+    <div class="footer">
+      <a href="blank.html">Site Map</a> | 
+      <a href="blank.html">Terms & Conditions</a> | 
+      <a href="blank.html">Privacy Policy</a> | 
+      <a href="about.html">About Us</a>
+    </div>
+  </div>
+
+<script>
+      var userloc ="";
+      var x = document.getElementById("errormsg");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else { 
+          x.innerHTML = "Can't Give Directions to 6425 Penn Ave, Pittsburgh, PA 15206: Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        userloc = position.coords.latitude + "," + position.coords.longitude;
+        initMap();
+      }
+
+      function showError(error) {
+        switch(error.code) {
+          case error.PERMISSION_DENIED:
+            x.innerHTML = "Can't Give Directions to 6425 Penn Ave, Pittsburgh, PA 15206: User denied the request for Geolocation."
+            break;
+          case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Can't Give Directions to 6425 Penn Ave, Pittsburgh, PA 15206: Location information is unavailable."
+            break;
+          case error.TIMEOUT:
+            x.innerHTML = "Can't Give Directions to 6425 Penn Ave, Pittsburgh, PA 15206: The request to get user location timed out."
+            break;
+          case error.UNKNOWN_ERROR:
+            x.innerHTML = "Can't Give Directions to 6425 Penn Ave, Pittsburgh, PA 15206: An unknown error occurred."
+            break;
+        }
+      }
+
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRenderer = new google.maps.DirectionsRenderer();
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: {lat: 40.4572258, lng: -79.9188198}   
+        });
+
+        directionsRenderer.setMap(map);
+        calculateAndDisplayRoute(directionsService, directionsRenderer);
+        }
+
+      function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+        directionsService.route(
+            {
+              origin: {query: userloc },
+              destination: {query: '6425 Penn Ave, Pittsburgh, PA 15206'},
+              travelMode: 'DRIVING'
+            },
+            function(response, status) {
+              if (status === 'OK') {
+                directionsRenderer.setDirections(response);
+              } else {
+                window.alert('Directions request failed due to ' + status);
+              }
+            });
+      }
+
+
+
+
+
+
+      </script>
+      <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcLsdj7FhP-xK-aIaHwcT4B7LllioefXo&callback=initMap">
+    </script>
+  </body>
+</html>
