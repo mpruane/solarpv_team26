@@ -1,21 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
   <head>
-    <link rel="stylesheet" type="text/css" href="{% static 'solarpv/decore.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'solarpv/decor.css' %}">
     <title>Solar PV: About</title>
   </head>
   <body>
   </br>
   <div class="container"> 
     <div class="banner">
-      <img class="compbanner" src="banner.png">
+      <img class="compbanner" src="{% static 'solarpv/banner.png' %}">
     </div>
     <div class="header">
       <a href="{% url 'about' %}">About Us</a> | 
       <a href="{% url 'contact' %}">Contact Us</a><br>
-      <a href="http://www.twitter.com"><img class="socialmedia" src="twitter.png"></a> 
-      <a href="http://www.facebook.com"><img  class="socialmedia" src="fbook.png"></a> 
-      <a href="http://www.instagram.com"><img class="socialmedia" src="instagram.png"></a>
+      <a href="http://www.twitter.com"><img class="socialmedia" src="{% static 'solarpv/twitter.png' %}"></a> 
+      <a href="http://www.facebook.com"><img  class="socialmedia" src="{% static 'solarpv/fbook.png' %}"></a> 
+      <a href="http://www.instagram.com"><img class="socialmedia" src="{% static 'solarpv/instagram.png' %}"></a>
     </div>
     <div class="nav">
       <a href="{% url 'blank' %}">Racks & Trackers</a> | 
@@ -45,9 +45,9 @@
     <div class="content">
       <h1>An Inside Look Into Solar PV</h1>
       <div class="SlideGroup">
-        <img class="Slides" src="1.png" style="width:100%">
-        <img class="Slides" src="2.png" style="width:100%">
-        <img class="Slides" src="3.png" style="width:100%">
+        <img class="Slides" src="{% static 'solarpv/1.png' %}" style="width:100%">
+        <img class="Slides" src="{% static 'solarpv/2.png' %}" style="width:100%">
+        <img class="Slides" src="{% static 'solarpv/3.png' %}" style="width:100%">
       </div>
     </br>
       <p>Here at Solar PV, every job is as big as the next.  Every step is a step in the right direction towards ending climate change and making this earth more sistanable.</p>

@@ -1,24 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
   <head>
-    <script src="jquery-3.1.1.js"></script>
-    <script src="jquery.validate.js"></script>
-    <script src="registration.js"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'solarpv/decore.css' %}">
+    <script src="{% static 'solarpv/jquery-3.1.1.js' %}"></script>
+    <script src="{% static 'solarpv/jquery.validate.js' %}"></script>
+    <script src="{% static 'solarpv/registration.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'solarpv/decor.css' %}">
     <title>Solar PV: Register</title>
   </head>
   <body>
   </br>
   <div class="container"> 
     <div class="banner">
-      <img class="compbanner" src="banner.png">
+      <img class="compbanner" src="{% static 'solarpv/banner.png' %}">
     </div>
     <div class="header">
       <a href="{% url 'about' %}">About Us</a> | 
       <a href="{% url 'contact' %}">Contact Us</a><br>
-      <a href="http://www.twitter.com"><img class="socialmedia" src="twitter.png"></a> 
-      <a href="http://www.facebook.com"><img  class="socialmedia" src="fbook.png"></a> 
-      <a href="http://www.instagram.com"><img class="socialmedia" src="instagram.png"></a>
+      <a href="http://www.twitter.com"><img class="socialmedia" src="{% static 'solarpv/twitter.png' %}"></a> 
+      <a href="http://www.facebook.com"><img  class="socialmedia" src="{% static 'solarpv/fbook.png' %}"></a> 
+      <a href="http://www.instagram.com"><img class="socialmedia" src="{% static 'solarpv/instagram.png' %}"></a>
     </div>
     <div class="nav">
       <a href="{% url 'blank' %}">Racks & Trackers</a> | 
