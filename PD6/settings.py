@@ -25,7 +25,7 @@ SECRET_KEY = 'ng(-=mc__lc&ms#@jl4##^t(al(2)5*gv$wa7248cq*g1t_)l_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,10 +80,11 @@ DATABASES = {
         'NAME': 'SolarPV',
         'USER': 'ift',
         'PASSWORD': 'Asupassword!',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
+
 
 
 # Password validation
