@@ -1,16 +1,16 @@
 from django.db import models
 
 class Client(models.Model):
-	ClientID = models.IntegerField(primary_key=True)
+	ClientID = models.AutoField(primary_key=True)
 	ClientCode = models.IntegerField() 
 	ClientName = models.CharField(max_length=50)
 	ClientType = models.CharField(max_length=50) 
 
 	def __str__(self):
-		return self.name
+		return self.ClientName
 
 class Location(models.Model):
-	LocationID = models.IntegerField(primary_key=True)
+	LocationID = models.AutoField(primary_key=True)
 	Address1 = models.CharField(max_length=50)
 	Address2 = models.CharField(max_length=50)
 	City = models.CharField(max_length=50)
@@ -22,19 +22,19 @@ class Location(models.Model):
 	ClientID = models.ForeignKey(Client, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.name
+		return self.City
 
 class Test_Standard(models.Model):
-	StandardID = models.IntegerField(primary_key=True)
+	StandardID = models.AutoField(primary_key=True)
 	Standard_Name = models.CharField(max_length=50)
 	Description = models.CharField(max_length=50)
 	Published_Date = models.DateField()
 
 	def __str__(self):
-		return self.name
+		return self.Standard_Name
 
 class Product(models.Model):
-	ModelNum = models.IntegerField(primary_key=True)
+	ModelNum = models.AutoField(primary_key=True)
 	Name = models.CharField(max_length=50)
 	Cell_technology = models.CharField(max_length=50)
 	Cell_manufacturer = models.CharField(max_length=50)
@@ -57,17 +57,17 @@ class Product(models.Model):
 	Junction_box_manufacturer = models.CharField(max_length=50)
 
 	def __str__(self):
-		return self.name
+		return self.ModelNum
 #-------------
 class Test_Sequence(models.Model):
-	SequenceID = models.IntegerField(primary_key=True)
+	SequenceID = models.AutoField(primary_key=True)
 	Sequence_Name= models.CharField(max_length=50)
 
 	def __str__(self):
-		return self.name
+		return self.Sequence_Name
 
 class UserTbl(models.Model):
-	UserID = models.IntegerField(primary_key=True)
+	UserID = models.AutoField(primary_key=True)
 	Firstname = models.CharField(max_length=50)
 	Middlename = models.CharField(max_length=50)
 	Lastname = models.CharField(max_length=50)
@@ -80,7 +80,7 @@ class UserTbl(models.Model):
 	ClientID = models.ForeignKey(Client, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.name
+		return self.FirstName + " " + self.Lastname
 
 class Certificate(models.Model):
 	Cert_number = models.IntegerField(primary_key=True)
@@ -93,10 +93,10 @@ class Certificate(models.Model):
 	Product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.name
+		return self.Cert_number
 
 class Service(models.Model):
-	ServiceID = models.IntegerField(primary_key=True)
+	ServiceID = models.AutoField(primary_key=True)
 	ServiceName = models.CharField(max_length=50)
 	Description = models.CharField(max_length=250)
 	Is_FI_required = models.BooleanField()
@@ -104,7 +104,7 @@ class Service(models.Model):
 	TestStandardID = models.ForeignKey(Test_Standard, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.name
+		return self.ServiceName
 
 class Performance_Data(models.Model):
 	ModelNum = models.ForeignKey(Product, on_delete=models.CASCADE)
@@ -118,7 +118,7 @@ class Performance_Data(models.Model):
 	Fill_factor_FF = models.FloatField()
 
 	def __str__(self):
-		return self.name
+		return self.ModelNum + " " + self.Test_Sequence
 
 class Product_Factory(models.Model):
 	LocationID = models.ForeignKey(Location, on_delete=models.CASCADE)
@@ -126,7 +126,7 @@ class Product_Factory(models.Model):
 	Contact = models.ForeignKey(Client, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.name
+		return self.LocationID + " " + self.ProductID
 
 class Factory_Inspection(models.Model):
 	ID = models.IntegerField(primary_key=True)
@@ -139,7 +139,7 @@ class Factory_Inspection(models.Model):
 	Cert_number = models.ForeignKey(Certificate, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.name
+		return self.ID
 
 class Expertise(models.Model):
 	Certification = models.CharField(max_length=50)
@@ -147,4 +147,4 @@ class Expertise(models.Model):
 	UserID = models.ForeignKey(UserTbl, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.name
+		return self.Certification
