@@ -57,7 +57,7 @@ class Product(models.Model):
 	Junction_box_manufacturer = models.CharField(max_length=50)
 
 	def __str__(self):
-		return self.ModelNum
+		return self.Name
 #-------------
 class Test_Sequence(models.Model):
 	SequenceID = models.AutoField(primary_key=True)
@@ -80,7 +80,7 @@ class UserTbl(models.Model):
 	ClientID = models.ForeignKey(Client, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.FirstName + " " + self.Lastname
+		return self.Firstname + " " + self.Lastname
 
 class Certificate(models.Model):
 	Cert_number = models.IntegerField(primary_key=True)
@@ -93,7 +93,7 @@ class Certificate(models.Model):
 	Product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.Cert_number
+		return str(self.Cert_number)
 
 class Service(models.Model):
 	ServiceID = models.AutoField(primary_key=True)
@@ -118,7 +118,7 @@ class Performance_Data(models.Model):
 	Fill_factor_FF = models.FloatField()
 
 	def __str__(self):
-		return self.ModelNum + " " + self.Test_Sequence
+		return str(self.ModelNum)
 
 class Product_Factory(models.Model):
 	LocationID = models.ForeignKey(Location, on_delete=models.CASCADE)
@@ -126,7 +126,7 @@ class Product_Factory(models.Model):
 	Contact = models.ForeignKey(Client, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.LocationID + " " + self.ProductID
+		return str(self.LocationID)
 
 class Factory_Inspection(models.Model):
 	ID = models.IntegerField(primary_key=True)
@@ -139,7 +139,7 @@ class Factory_Inspection(models.Model):
 	Cert_number = models.ForeignKey(Certificate, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.ID
+		return str(self.ID)
 
 class Expertise(models.Model):
 	Certification = models.CharField(max_length=50)

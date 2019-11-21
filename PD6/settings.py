@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'backend',
     'solarpv',
     'django.contrib.admin',
@@ -86,6 +87,10 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = { 
+'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+]
+}
 
 
 # Password validation
