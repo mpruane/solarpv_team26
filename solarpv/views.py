@@ -18,3 +18,6 @@ def login(request):
 
 def register(request):
 	return render(request, 'solarpv/register.html')
+
+def testandcert(request):
+	return render(request, 'solarpv/testandcert.html')
