@@ -9,7 +9,7 @@ var producttbl = [];
 var useridtbl = [];
 
 var newRequest = new XMLHttpRequest();
-newRequest.open('GET', 'http://mpruane.com:8000/api/UserTbl');
+newRequest.open('GET', 'http://mpruane.com/Final/api/UserTbl');
 newRequest.onload = function() {
 	record = JSON.parse(newRequest.responseText);
 	for (i = 0; i < record.length; i++){
@@ -19,7 +19,7 @@ newRequest.onload = function() {
 newRequest.send();
 
 var newRequest2 = new XMLHttpRequest();
-newRequest2.open('GET', 'http://mpruane.com:8000/api/Test_Standard');
+newRequest2.open('GET', 'http://mpruane.com/Final/api/Test_Standard');
 newRequest2.onload = function() {
 	record = JSON.parse(newRequest2.responseText);
 	for (i = 0; i < record.length; i++){
@@ -29,7 +29,7 @@ newRequest2.onload = function() {
 newRequest2.send();
 
 var newRequest3 = new XMLHttpRequest();
-newRequest3.open('GET', 'http://mpruane.com:8000/api/Product');
+newRequest3.open('GET', 'http://mpruane.com/Final/api/Product');
 newRequest3.onload = function() {
 	record = JSON.parse(newRequest3.responseText);
 	for (i = 0; i < record.length; i++){
@@ -39,7 +39,7 @@ newRequest3.onload = function() {
 newRequest3.send();
 
 var newRequest4 = new XMLHttpRequest();
-newRequest4.open('GET', 'http://mpruane.com:8000/api/Location');
+newRequest4.open('GET', 'http://mpruane.com/Final/api/Location');
 newRequest4.onload = function() {
 	record = JSON.parse(newRequest4.responseText);
 	for (i = 0; i < record.length; i++){
@@ -63,7 +63,7 @@ btnsearch.addEventListener('click', function() {
 		resultsContainer.innerHTML = 'Please Enter Value To Search';
 	} else if (sBy == 'cert') {
 		resultsContainer.innerHTML = 'Search By Certificate Number<br>'
-		ourRequest.open('GET', 'http://mpruane.com:8000/api/Certificate/' + txtsearch.value.trim());
+		ourRequest.open('GET', 'http://mpruane.com/Final/api/Certificate/' + txtsearch.value.trim());
 		ourRequest.onload = function() {
 			var ourData = JSON.parse(ourRequest.responseText);
 			renderHTML(ourData, 1);
@@ -72,7 +72,7 @@ btnsearch.addEventListener('click', function() {
 		ourRequest.send();	
 	} else {
 		resultsContainer.innerHTML = 'Search By Keyword<br>'
-		ourRequest.open('GET', 'http://mpruane.com:8000/api/Certificate/');
+		ourRequest.open('GET', 'http://mpruane.com/Final/api/Certificate/');
 		ourRequest.onload = function() {
 			var ourData = JSON.parse(ourRequest.responseText);
 			renderHTML(ourData, 2);
