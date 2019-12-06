@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
   <head>
+    <script src="{% static 'solarpv/jquery-3.1.1.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'solarpv/decor.css' %}">
     <title>Solar PV: Home</title>
   </head>
@@ -44,7 +45,18 @@
     </div>
     <div class="content">
       <h1>Testing & Certification</h1>
-      <p>Hi!!xddd</p>
+      <p><center>
+        <input type="text" name="searchtxt" id="txtsearch"><br/>
+        <input type="radio" name="searchby" value="cert" checked>Certificate Number 
+        <input type="radio" name="searchby" value="keyword">Keyword<br/>
+        <button id="btnsearch">Search</button></center> 
+      </p>
+      <p>
+        <div id="sresults"></div>
+      <p>
+        <button id="btnclear">Clear</button>
+      </p>
+      <script src="{% static 'solarpv/testandcert.js' %}"></script>
     </div>
     <div class="r_sidebar">
        <svg width="214" height="460">

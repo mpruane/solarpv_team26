@@ -1,4 +1,5 @@
 from django.db import models
+from django.apps import apps
 
 class Client(models.Model):
 	ClientID = models.IntegerField(primary_key=True)
@@ -7,7 +8,7 @@ class Client(models.Model):
 	ClientType = models.CharField(max_length=50)
 
 	def __str__(self):
- 		return self.name
+ 		return self.ClientName
 
 class Location(models.Model):
 	LocationID = models.IntegerField(primary_key=True)
@@ -72,10 +73,18 @@ class Certificate(models.Model):
 	def __str__(self):
  		return self.name
 
-# Create your models here.
-#SolarPV
-#XXX	• Client
-#XXX	• Location
-#XXX	• Product
-#XXX	• Test Standard
-#• Certificate
+class UserTbl(models.Model):
+	UserID = models.AutoField(primary_key=True)
+	Firstname = models.CharField(max_length=50)
+	Middlename = models.CharField(max_length=50)
+	Lastname = models.CharField(max_length=50)
+	Jobtitle = models.CharField(max_length=50)
+	Email = models.EmailField() 
+	Officephone = models.IntegerField()
+	Cellphone = models.IntegerField()
+	Prefix = models.CharField(max_length=50)
+	Isstaff = models.BooleanField()
+	ClientID = models.ForeignKey(Client, on_delete=models.CASCADE)
+
+	def __str__(self):
+		return self.Firstname + " " + self.Lastname

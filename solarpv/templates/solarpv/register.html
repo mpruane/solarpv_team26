@@ -45,10 +45,9 @@
   			<li><a href="{% url 'blank' %}">Certification</a></li>
   		</ul>
     </div>
-    <div class="content">
+    <div class="content">{{ form }}
       <h1>Registration</h1>
       <form class="regform" id="registrationForm" method="get" action="">
-        
           <p>
             <label for="rusername">Username: </label>
             <input id="rusername" name="rusername" type="text" autofocus>
